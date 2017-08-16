@@ -5,7 +5,7 @@
   <groupId>my.test</groupId>
   <artifactId>xml</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>xml</name>
   <url>http://maven.apache.org</url>

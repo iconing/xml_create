@@ -1,1 +1,6 @@
+my\test\bean\DataItem.class
+my\test\util\XmlUtil.class
 my\test\App.class
+my\test\bean\DataElement.class
+my\test\util\ExcelUtil.class
+my\test\test\XmlTest.class
