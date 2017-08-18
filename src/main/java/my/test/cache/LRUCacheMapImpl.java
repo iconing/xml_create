@@ -8,10 +8,12 @@ public class LRUCacheMapImpl<K, V> extends AbstractCacheMap<K, V> {
     public LRUCacheMapImpl(int cacheSize, long defaultExpire) {
         super(cacheSize, defaultExpire);
         this.cacheMap = new LinkedHashMap<K, CacheObject<K, V>>(cacheSize + 1, 1f, true){
+            /**
+             * 实现 LinkedHashMap里的removeEledestEntry方法。
+             */
             @Override
             protected boolean removeEldestEntry(Map.Entry<K, CacheObject<K, V>> eldest) {
                 return LRUCacheMapImpl.this.removeEledestEntry(eldest);
-
             }
         };
     }
@@ -21,8 +23,8 @@ public class LRUCacheMapImpl<K, V> extends AbstractCacheMap<K, V> {
             return false;
         }
         return size() > cacheSize;
-
     }
+
     protected int eliminateCache() {
         if (!isNeedClearExpiredObj()) {
             return 0;
