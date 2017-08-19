@@ -24,12 +24,12 @@ public class TcpClientThead implements Runnable{
             pw.flush();
 //            socket.shutdownOutput();
             InputStream is = socket.getInputStream();
-//            String str = TcpUtil.readStrFrom(is);
             TcpUtil.readDtaString(is);
 
             System.out.println(Thread.currentThread().getName() + ": .... end request ");
             System.out.println("");
 
+            socket.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

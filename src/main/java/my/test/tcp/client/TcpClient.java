@@ -1,11 +1,5 @@
 package my.test.tcp.client;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.Socket;
-
 public class TcpClient {
     private static String ip = "192.168.68.110";
     private static int port = 12010;
@@ -21,7 +15,7 @@ public class TcpClient {
                 "44444" +
                 "55555555555555555555555555555555555555555555555555555555555555555555555555555555";
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws Exception {
 
         for (int i = 0; i < 10; i++) {
         }
